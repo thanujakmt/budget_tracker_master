@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(243, 238, 238);
+}
+
+#entry {
+  padding-bottom: 30px;
+}
+
+.entry_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+}
+.entry_wrapper h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.entry_wrapper .entry_row {
+  display: flex;
+  gap: 30px;
+}
+.entry_wrapper .entry_row .col-md {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
+  padding: 10px;
+  width: 100%;
+  color: white;
+}
+.entry_wrapper .entry_row .col-md:first-child {
+  background-color: rgb(1, 123, 254);
+}
+.entry_wrapper .entry_row .col-md:nth-child(2) {
+  background-color: rgb(95, 171, 109);
+}
+.entry_wrapper .entry_row .col-md:nth-child(3) {
+  background-color: rgb(221, 74, 69);
+}
+.entry_wrapper .entry_row .col-md .heading {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 900;
+}
+.entry_wrapper .entry_row .col-md form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter_wraper .filter_row {
+  padding: 30px 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  margin: 10px;
+}
+.filter_wraper .filter_row h1 {
+  text-align: center;
+}
+.filter_wraper .filter_row form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.filter_wraper .filter_row form button {
+  width: 100px;
+}
+
+.show_data_row {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 10px;
+}
+.show_data_row h1 {
+  text-align: center;
+}
+@media screen and (max-width: 415px) {
+  .show_data_row table {
+    font-size: 0.6em;
+  }
+  .show_data_row table i {
+    font-size: 1.5em;
+    padding: 0px 0px;
+  }
+}
+.show_data_row table tbody {
+  max-height: 1px;
+  overflow: scroll;
+}
+.show_data_row table tbody tr td i {
+  background-color: rgb(255, 0, 119);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.show_data_row table tbody tr td i:hover {
+  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.found {
+  background-color: #fffd99 !important;
+}
+
+.not_found {
+  display: none !important;
+}

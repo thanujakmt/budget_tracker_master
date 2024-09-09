@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href = 'static/scss/css/style.css'>
+    
+</head>
+<body>
+
+    <section id="entry">
+        <div class="container-fluid entry_wrapper">
+            <h1>Budget Tracker</h1>
+            <div class="row entry_row">
+                <div class="col-md">
+                    <p class="heading">Summary</p>
+                    
+                    <p>Total Income: <span  id="total_income">3568</span></p>
+                    <p >Total Expense: <span id="total_expense">200</span></p>
+                    <p >Remaining Balance: <span id="remaining_bal">3368</span></p>
+                </div>
+                <div class="col-md">
+                    <p class="heading">Enter Income</p>
+                    <form id = "income_form">
+                        <input type="number" name = "amount" placeholder="Enter Income Amount" class="form-control">
+                        <input type="date" name = "date" class="form-control">
+                        <input type="text" id = "income_category" value = "Income" disabled class="form-control">
+
+                        <button type = "button" id = "income_btn" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md">
+                    <p class="heading">Enter Expense</p>
+                    <form id = "expense_form">
+                    <input type="number" name = "amount" placeholder="Enter Expence Amount" class="form-control">
+                    <input type="date" name = "date" class="form-control">
+                    <select name="category" id="expense_category" class="form-control">
+                        <option class ="form-select" selected value="Select Category">Select Category</option>
+                        <option class ="form-select" value="Food">Food</option>
+                        <option class ="form-select" value="Utilities">Utilities</option>
+                        <option class ="form-select" value="Entertainment">Entertainment</option>
+                        <option class ="form-select" value="Shopping">Shopping</option>
+                        <option class ="form-select" value="Others">Others</option>
+                    </select>
+                    <button type = "button" id = "expense_btn"  class="btn btn-primary">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="filter">
+        <div class="container-fluid filter_wraper">
+            <div class="row filter_row">
+                <h1>Go to Expense/Income Date</h1>
+                <div class="col">
+                    
+                    <form>
+                    <input id = "filter_date" class = "form-control" type="date">
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="show_data">
+        <div class="container-fluid show_data_wraper">
+            <div class="row show_data_row">
+                <div class="col">
+                    <h1>Current Month's Entries</h1>
+                    <table class="table">
+                       <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Delete</th>
+                        </tr>
+                       </thead>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
